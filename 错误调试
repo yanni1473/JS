@@ -1,0 +1,8 @@
+方法1：用alert() 和document.write()方法监视变量值。 
+alert()在弹出对话框显示变量值的同时，会停止代码的继续运行，直到用户单击“确定”按钮，而document.write()则在输出值后继续运行代码。调试JS时可以根据具体情况来选择这种方法。
+方法2：用onerror事件找到错误：（对于IE） 
+当页面出现异常时，error事件会在window对象上触发
+window.onerror=function(message,url,line) 
+{ 
+alert("不好意思，出错了:\n错误提示："+message+"\nUrl："+url+"\n行号："+line); 
+return true;//屏蔽系统事件 
